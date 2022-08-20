@@ -114,12 +114,12 @@ export const AddPerson: React.FC<Props> = ({ savePerson }) => {
                         <span className={classes.text}>ADD USER</span>
                     </Grid>
                     {renderField({ id: 'branchId', label: 'Branch Id', placeholder: 'Enter Branch id', type: 'number' })}
-                    {renderField({ id: 'userName', label: 'User name', placeholder: 'Enter Username' })}
-                    {renderField({ id: 'password', label: 'password', placeholder: 'Enter password' })}
-                    {renderField({ id: 'firstName', label: 'firstName', placeholder: 'Enter firstName' })}
-                    {renderField({ id: 'middleName', label: 'middleName', placeholder: 'Enter middleName' })}
-                    {renderField({ id: 'lastName', label: 'lastName', placeholder: 'Enter lastName' })}
-                    {renderField({ id: 'position', label: 'position', placeholder: 'Enter position' })}
+                    {renderField({ id: 'userName', label: 'User name', placeholder: 'Enter User Name' })}
+                    {renderField({ id: 'password', label: 'Password', placeholder: 'Enter Password' })}
+                    {renderField({ id: 'firstName', label: 'First Name', placeholder: 'Enter First Name' })}
+                    {renderField({ id: 'middleName', label: 'Middle Name', placeholder: 'Enter Middle Name' })}
+                    {renderField({ id: 'lastName', label: 'Last Name', placeholder: 'Enter Last Name' })}
+                    {renderField({ id: 'position', label: 'Position', placeholder: 'Enter position' })}
                     <Grid item className={classes.fullwidth}>
                         <Grid container spacing={2} alignItems="center" justifyContent="flex-end">
                             <Grid item>
