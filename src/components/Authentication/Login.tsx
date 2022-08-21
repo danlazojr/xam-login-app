@@ -132,7 +132,7 @@ export default function Login() {
                         </Grid>
                         {renderField({ id: 'branchId', label: 'Branch Id', placeholder: 'Enter Branch id', type: 'number' })}
                         {renderField({ id: 'userName', label: 'User Name', placeholder: 'Enter Username' })}
-                        {renderField({ id: 'password', label: 'Password', placeholder: 'Enter Password' })}
+                        {renderField({ id: 'password', label: 'Password', placeholder: 'Enter Password', type: 'password' })}
                         <Grid item className={classes.fullwidth}>
                             <Button variant="contained" type="submit" className={classes.btn} data-testid="btn-login">LOGIN</Button>
                         </Grid>
