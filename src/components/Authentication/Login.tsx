@@ -124,7 +124,7 @@ export default function Login() {
         <div className={classes.container}>
             <Card className={classes.card}>
 
-                <form autoComplete="off" onSubmit={onValidSubmit} onChange={handleOnChange}>
+                <form onSubmit={onValidSubmit} onChange={handleOnChange}>
 
                     <Grid container direction="column" spacing={2} alignItems="center" justifyContent="center">
                         <Grid item className={classes.fullwidth}>

@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import { useSelector, shallowEqual, useDispatch } from "react-redux"
 import { Dispatch } from "redux"
 import { removeUser } from "../../store/actionCreators";
+import {Grid} from "@material-ui/core";
 
 const styles = {
     btn: {
@@ -12,12 +13,22 @@ const styles = {
         marginTop: 4,
         marginRight: 8,
     },
+    label: {
+        color: '#fff',
+        padding: 8,
+        margin: 0,
+    }
 };
+
+type Props = {
+    showUser: boolean,
+}
+
 
 // @ts-ignore
 const useStyles = makeStyles(styles);
 
-export default function Logout() {
+export const Logout: React.FC<Props> = ({ showUser }) => {
     const classes = useStyles();
     const user: IPerson = useSelector(
         (state: PersonState) => state.user,
@@ -31,8 +42,20 @@ export default function Logout() {
     )
 
     const onClick = () => logout(user);
-
-
+    if (showUser){
+        return (
+            <Grid container>
+                <Grid item>
+                    <h3 className={classes.label}>
+                        {user.userName}
+                    </h3>
+                </Grid>
+                <Grid item xs>
+                    <Button variant="contained" onClick={onClick} className={classes.btn}>LOGOUT</Button>
+                </Grid>
+            </Grid>
+        )
+    }
 
     return (<Button variant="contained" onClick={onClick} className={classes.btn}>LOGOUT</Button>);
 }

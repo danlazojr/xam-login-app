@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import Logout from "../Authentication/Logout";
+import { Logout } from "../Authentication/Logout";
 
 const styles = {
     btn: {
@@ -32,7 +32,7 @@ export default function Navbar() {
     return (
         <nav className={classes.nav}>
             <div className={classes.container}>
-                <Logout />
+                <Logout showUser/>
             </div>
         </nav>
     )
